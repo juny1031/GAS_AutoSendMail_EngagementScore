@@ -14,9 +14,9 @@ function myFunction() {
   let data = sheet.getRange(row, column, numRows, numColumns).getValues();
 
   // メール内容の変数
-  let recipient = "miyamoto_junya@microad.co.jp,ito_masaharu@microad.co.jp";
-  let title = "※自動送信テスト【wevox面談】対象者のお知らせ";
-  let body = "wevox面談の対象者を自動送信します。担当者は日程調整をお願いいたします。\n\n"
+  let recipient = "アドレス1,アドレス2";
+  let title = "※自動送信テスト【エンゲージメントスコア面談】対象者のお知らせ";
+  let body = "面談の対象者を自動送信します。担当者は日程調整をお願いいたします。\n\n"
 
   // 面談対象者を調べて本文内に追記
   let date = new Date();
@@ -38,7 +38,7 @@ function myFunction() {
   
   body +=  "\nこのメールは以下のスプレッドシートをもとに自動送信をしています。"+
            "\nツール→スクリプトエディタでコードが確認・編集できます。"+
-           "\nhttps://docs.google.com/spreadsheets/d/1GgqWX5ySfbXAE-0Cvcu09qZ7o33sya5qPqyi5SS0JZk/edit#gid=0";
+           "\nスプレッドシートのURL";
   
   // メールを送信する
   GmailApp.sendEmail(recipient, title, body);
